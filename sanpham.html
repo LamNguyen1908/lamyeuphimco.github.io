@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="vi"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>San pham - Lam Shop</title><link rel="stylesheet" href="style.css"></head><body>
+
+<header class="header">
+ <nav class="nav">
+  <div class="logo">LAM SHOP</div>
+  <div class="menu">
+   <a href="index.html">Trang chu</a>
+   <a href="sanpham.html">San pham</a>
+   <a href="tintuc.html">Tin tuc</a>
+  </div>
+ </nav>
+</header>
+
+<section class="hero"><h1>San pham</h1><p>Nhung mon do gaming dang co tai Lam Shop.</p></section>
+<main class="container"><div class="card-grid">
+<div class="product"><img src="product1.svg"><div class="product-info"><h3>Aula F75</h3><p>Ban phim co gaming</p><div class="price">850.000đ</div><button class="btn" onclick="openOrder('Aula F75')">Dat hang</button></div></div>
+<div class="product"><img src="product2.svg"><div class="product-info"><h3>MAD 60HE</h3><p>Ban phim Hall Effect</p><div class="price">650.000đ</div><button class="btn" onclick="openOrder('MAD 60HE')">Dat hang</button></div></div>
+<div class="product"><img src="product3.svg"><div class="product-info"><h3>Aula 68HE</h3><p>Ban phim Rapid Trigger</p><div class="price">550.000đ</div><button class="btn" onclick="openOrder('Aula 68HE')">Dat hang</button></div></div>
+<div class="product"><img src="product4.svg"><div class="product-info"><h3>ATK A9SE</h3><p>Chuot gaming</p><div class="price">499.000đ</div><button class="btn" onclick="openOrder('ATK A9SE')">Dat hang</button></div></div>
+<div class="product"><img src="product5.svg"><div class="product-info"><h3>Aula 60HE</h3><p>Ban phim gaming</p><div class="price">499.000đ</div><button class="btn" onclick="openOrder('Aula 60HE')">Dat hang</button></div></div>
+</div></main>
+<div id="orderModal" class="modal"><div class="modal-box"><button class="close" onclick="closeOrder()">×</button><h2 id="orderTitle">Dat hang</h2>
+<form id="orderForm" onsubmit="submitOrder(event)">
+<div class="form-group"><label>San pham</label><input id="productName" readonly></div>
+<div class="form-group"><label>Ho ten</label><input id="customerName" required></div>
+<div class="form-group"><label>So dien thoai</label><input required type="tel"></div>
+<div class="form-group"><label>Dia chi</label><textarea required rows="3"></textarea></div>
+<div class="form-group"><label>Thanh toan</label><select><option>COD - Thanh toan khi nhan hang</option><option>Chuyen khoan ngan hang</option></select></div>
+<button class="btn" type="submit">Xac nhan dat hang</button></form>
+<div id="thankYou" style="display:none"><h2>Dat hang thanh cong!</h2><p id="thankText"></p><button class="btn" onclick="closeOrder()">Dong</button></div>
+</div></div>
+<footer class="footer">© 2026 Lam Shop</footer><script src="script.js"></script></body></html>

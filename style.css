@@ -1,0 +1,33 @@
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:#f4f4f4;color:#171717}
+a{text-decoration:none;color:inherit}
+.header{background:#111;color:#fff;position:sticky;top:0;z-index:100;box-shadow:0 2px 12px #0003}
+.nav{max-width:1150px;margin:auto;padding:15px 20px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-size:26px;font-weight:800;letter-spacing:1px}
+.menu{display:flex;gap:6px;flex-wrap:wrap}
+.menu a{padding:10px 14px;border-radius:8px;color:#fff}
+.menu a:hover,.menu a.active{background:#333}
+.hero{max-width:1150px;margin:25px auto;padding:55px 35px;border-radius:18px;background:linear-gradient(135deg,#111,#444);color:#fff}
+.hero h1{font-size:44px;margin-bottom:12px}.hero p{font-size:19px;line-height:1.5}
+.container{max-width:1050px;width:92%;margin:30px auto 60px}
+.section-title{font-size:30px;margin-bottom:18px}
+.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.product{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 3px 12px #0001;transition:.2s}
+.product:hover{transform:translateY(-4px);box-shadow:0 8px 22px #0002}
+.product img{width:100%;height:210px;object-fit:contain;background:#eee}
+.product-info{padding:17px}.product-info h3{margin-bottom:8px}.price{font-size:20px;font-weight:bold;margin:10px 0}.btn{display:inline-block;background:#111;color:#fff;padding:11px 17px;border:0;border-radius:8px;cursor:pointer;font-size:15px}.btn:hover{background:#333}
+.news-list{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 3px 12px #0001}
+.news-item{display:flex;gap:20px;padding:18px;border-bottom:1px solid #ddd;transition:.2s}
+.news-item:last-child{border-bottom:0}.news-item:hover{background:#fafafa;transform:translateX(3px)}
+.news-item img{width:175px;height:120px;object-fit:cover;border-radius:10px;flex-shrink:0}
+.news-item h3{font-size:22px;margin:4px 0 10px}.news-item p{color:#555;line-height:1.5}.date{font-size:13px;color:#888;margin-top:8px}
+.article{max-width:900px;width:92%;margin:30px auto 60px;background:#fff;padding:30px;border-radius:15px}
+.article h1{font-size:36px;margin-bottom:10px}.article img{width:100%;max-height:520px;object-fit:cover;border-radius:12px;margin:20px 0}.article p{font-size:18px;line-height:1.75;margin:14px 0}
+.footer{background:#111;color:#fff;text-align:center;padding:28px}
+.modal{display:none;position:fixed;inset:0;background:#0008;z-index:200;align-items:center;justify-content:center;padding:20px}.modal.show{display:flex}
+.modal-box{background:#fff;border-radius:14px;padding:25px;width:min(520px,100%);max-height:90vh;overflow:auto}.close{float:right;border:0;background:none;font-size:28px;cursor:pointer}
+.form-group{margin:13px 0}.form-group label{display:block;font-weight:bold;margin-bottom:6px}.form-group input,.form-group select,.form-group textarea{width:100%;padding:11px;border:1px solid #ccc;border-radius:8px;font-size:15px}
+.note{background:#f0f0f0;padding:12px;border-radius:8px;margin:10px 0;font-size:14px}
+@media(max-width:750px){.nav{flex-direction:column}.hero h1{font-size:32px}.card-grid{grid-template-columns:1fr 1fr}.news-item img{width:120px;height:90px}.news-item h3{font-size:18px}}
+@media(max-width:500px){.card-grid{grid-template-columns:1fr}.news-item{gap:12px}.news-item img{width:95px;height:80px}.news-item h3{font-size:16px}.news-item p{font-size:14px}.article h1{font-size:27px}}

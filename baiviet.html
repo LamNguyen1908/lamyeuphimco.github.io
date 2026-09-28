@@ -1,0 +1,17 @@
+<!DOCTYPE html><html lang="vi"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Bai viet - Lam Shop</title><link rel="stylesheet" href="style.css"></head><body>
+<header class="header">
+ <nav class="nav">
+  <div class="logo">LAM SHOP</div>
+  <div class="menu">
+   <a href="index.html">Trang chu</a>
+   <a href="sanpham.html">San pham</a>
+   <a href="tintuc.html">Tin tuc</a>
+  </div>
+ </nav>
+</header>
+
+<main class="article"><h1 id="title">Dang tai...</h1><div class="date" id="date"></div><img id="image" src="tin1.svg"><div id="content"></div><a class="btn" href="tintuc.html">← Quay lai tin tuc</a></main>
+<footer class="footer">© 2026 Lam Shop</footer><script>const articles=[('MEGA LIVE BACK TO SCHOOL 25/09/2026', '25/09/2026', 'tin1.svg', 'MEGA LIVE vao luc 18h00 ngay 25/09/2026.'), ('THEM DUNG LUONG - BOT NGAN LUONG', '25/09/2026', 'tin2.svg', 'Thong tin ve chuong trinh va cac uu dai dang duoc cap nhat.'), ('GIOI THIEU BO PC FULL', '25/09/2026', 'tin3.svg', 'Day la noi ban co the gioi thieu cau hinh, linh kien va gia cua bo PC.'), ('BAN PHIM CO AULA F99 PRO', '24/09/2026', 'tin4.svg', 'AULA F99 Pro voi thiet ke dep, layout tien dung va huong toi nguoi dung gaming.'), ('TOP PHU KIEN GAMING', '23/09/2026', 'tin5.svg', 'Ban co the them danh sach phu kien, thong tin va gia san pham tai day.'), ('UPDATE SHOP - SAN PHAM MOI', '22/09/2026', 'tin6.svg', 'Shop se tiep tuc cap nhat them san pham moi trong thoi gian toi.')];
+const id=new URLSearchParams(location.search).get('id')||'1';
+const a=articles[Number(id)-1]||articles[0];
+document.getElementById('title').textContent=a[0];document.getElementById('date').textContent=a[1];document.getElementById('image').src=a[2];document.getElementById('content').innerHTML='<p>'+a[3]+'</p><p>Ban co the sua noi dung bai viet nay de them thong tin, hinh anh hoac thong bao cua rieng ban.</p>';</script></body></html>
